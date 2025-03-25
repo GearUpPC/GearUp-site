@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GearUp - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #888;
+    }
+
+    .hero {
+      padding: 80px 40px;
+      text-align: center;
+      background: linear-gradient(145deg, #111, #1b1b1b);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #ccc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      background-color: #141414;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 30px;
+      text-align: center;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">GEARUP</div>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">PCs</a>
+      <a href="#">Composants</a>
+      <a href="#">Services</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenue chez GearUp</h1>
+    <p>PC Gamer prémontés, composants haut de gamme et service sur mesure pour les vrais passionnés.</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h3>PC Gaming</h3>
+      <p>Performances, style et refroidissement au top.</p>
+    </div>
+    <div class="card">
+      <h3>Cartes Graphiques</h3>
+      <p>Dernières générations NVIDIA et AMD.</p>
+    </div>
+    <div class="card">
+      <h3>Cartes Mères</h3>
+      <p>Compatibilité et fiabilité pour tout build.</p>
+    </div>
+    <div class="card">
+      <h3>Services & SAV</h3>
+      <p>Support client réactif et personnalisé.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 GearUp - Tous droits réservés
+  </footer>
+</body>
+</html>

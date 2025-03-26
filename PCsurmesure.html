@@ -63,27 +63,6 @@
     }
 
     form {
-<input type="text" name="nom" placeholder="John Doe" required>
-<input type="tel" name="telephone" placeholder="06 92 00 00 00" required>
-<input type="email" name="email" placeholder="JohnDoe@gmail.com" required>
-<input type="text" name="adresse" placeholder="Rue des Hunter" required>
-<input type="text" name="ville" placeholder="Bordeaux" required>
-<input type="text" name="code-postal" placeholder="33000" required>
-<input type="text" name="pays" placeholder="France" required>
-
-<select name="utilisation" required>
-  <option value="">Utilisation prévue</option>
-  <option value="gaming" selected>Gaming</option>
-  <option value="bureautique">Bureautique</option>
-  <option value="montage">Montage / Création</option>
-  <option value="autre">Autre</option>
-</select>
-
-<input type="number" name="budget" placeholder="1800€" required>
-<input type="date" name="date-achat" required>
-
-<textarea name="message" placeholder="Je précise ma demande" required></textarea>
-
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -172,52 +151,53 @@
   <main>
     <h1>PC sur mesure</h1>
     <form action="#" method="post">
-      <div class="form-group">
-        <label for="nom">Nom & Prénom *</label>
-        <input type="text" name="nom" id="nom" required>
-      </div>
-      <div class="form-group">
-        <label for="telephone">Numéro de téléphone *</label>
-        <input type="tel" name="telephone" id="telephone" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Votre e-mail *</label>
-        <input type="email" name="email" id="email" required>
-      </div>
-      <div class="form-group">
-        <label for="rue">Rue *</label>
-        <input type="text" name="rue" id="rue" required>
-      </div>
-      <div class="form-group">
-        <label for="ville">Ville *</label>
-        <input type="text" name="ville" id="ville" required>
-      </div>
-      <div class="form-group">
-        <label for="code_postal">Code postal *</label>
-        <input type="text" name="code_postal" id="code_postal" required>
-      </div>
-      <div class="form-group">
-        <label for="pays">Pays *</label>
-        <input type="text" name="pays" id="pays" required>
-      </div>
-      <div class="form-group">
-        <label for="utilisation">Utilisation *</label>
-        <input type="text" name="utilisation" id="utilisation" required>
-      </div>
-      <div class="form-group">
-        <label for="budget">Budget *</label>
-        <input type="text" name="budget" id="budget" required>
-      </div>
-      <div class="form-group">
-        <label for="date-achat">Date d'achat souhaitée *</label>
-        <input type="date" name="date-achat" id="date-achat" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message *</label>
-        <textarea name="message" id="message" required></textarea>
-      </div>
-      <button type="submit">Envoyer la demande</button>
-    </form>
+  <div class="form-group">
+    <label for="nom">Nom & Prénom *</label>
+    <input type="text" name="nom" id="nom" placeholder="John Doe" required>
+  </div>
+  <div class="form-group">
+    <label for="telephone">Numéro de téléphone *</label>
+    <input type="tel" name="telephone" id="telephone" placeholder="06 92 00 00 00" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Votre e-mail *</label>
+    <input type="email" name="email" id="email" placeholder="JohnDoe@gmail.com" required>
+  </div>
+  <div class="form-group">
+    <label for="rue">Rue *</label>
+    <input type="text" name="rue" id="rue" placeholder="Rue des Hunter" required>
+  </div>
+  <div class="form-group">
+    <label for="ville">Ville *</label>
+    <input type="text" name="ville" id="ville" placeholder="Bordeaux" required>
+  </div>
+  <div class="form-group">
+    <label for="code_postal">Code postal *</label>
+    <input type="text" name="code_postal" id="code_postal" placeholder="33000" required>
+  </div>
+  <div class="form-group">
+    <label for="pays">Pays *</label>
+    <input type="text" name="pays" id="pays" placeholder="France" required>
+  </div>
+  <div class="form-group">
+    <label for="utilisation">Utilisation *</label>
+    <input type="text" name="utilisation" id="utilisation" placeholder="Gaming" required>
+  </div>
+  <div class="form-group">
+    <label for="budget">Budget *</label>
+    <input type="text" name="budget" id="budget" placeholder="1800€" required>
+  </div>
+  <div class="form-group">
+    <label for="date-achat">Date d'achat souhaitée *</label>
+    <input type="date" name="date-achat" id="date-achat" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Message *</label>
+    <textarea name="message" id="message" placeholder="Je précise ma demande" required></textarea>
+  </div>
+  <button type="submit">Envoyer la demande</button>
+</form>
+
   </main>
 
   <footer>

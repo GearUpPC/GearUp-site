@@ -63,12 +63,22 @@
     }
 
     form {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 15px;
       background-color: #f7f7f7;
       padding: 30px;
       border-radius: 10px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
     }
 
     input, textarea, select {
@@ -86,7 +96,7 @@
 
     button {
       padding: 12px;
-      background-color: #ff6600;
+      background-color: #0077cc;
       color: #fff;
       font-size: 1rem;
       border: none;
@@ -98,7 +108,7 @@
     }
 
     button:hover {
-      background-color: #e65100;
+      background-color: #005fa3;
     }
 
     footer {
@@ -141,17 +151,50 @@
   <main>
     <h1>PC sur mesure</h1>
     <form action="#" method="post">
-      <input type="text" name="nom" placeholder="Nom & Prénom *" required>
-      <input type="tel" name="telephone" placeholder="Numéro de téléphone *" required>
-      <input type="email" name="email" placeholder="Votre e-mail *" required>
-      <input type="text" name="rue" placeholder="Rue *" required>
-      <input type="text" name="ville" placeholder="Ville *" required>
-      <input type="text" name="code_postal" placeholder="Code postal *" required>
-      <input type="text" name="pays" placeholder="Pays *" required>
-      <input type="text" name="utilisation" placeholder="Utilisation *" required>
-      <input type="text" name="budget" placeholder="Budget *" required>
-      <input type="date" name="date-achat" placeholder="Date d'achat souhaitée *" required>
-      <textarea name="message" placeholder="Message *" required></textarea>
+      <div class="form-group">
+        <label for="nom">Nom & Prénom *</label>
+        <input type="text" name="nom" id="nom" required>
+      </div>
+      <div class="form-group">
+        <label for="telephone">Numéro de téléphone *</label>
+        <input type="tel" name="telephone" id="telephone" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Votre e-mail *</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="rue">Rue *</label>
+        <input type="text" name="rue" id="rue" required>
+      </div>
+      <div class="form-group">
+        <label for="ville">Ville *</label>
+        <input type="text" name="ville" id="ville" required>
+      </div>
+      <div class="form-group">
+        <label for="code_postal">Code postal *</label>
+        <input type="text" name="code_postal" id="code_postal" required>
+      </div>
+      <div class="form-group">
+        <label for="pays">Pays *</label>
+        <input type="text" name="pays" id="pays" required>
+      </div>
+      <div class="form-group">
+        <label for="utilisation">Utilisation *</label>
+        <input type="text" name="utilisation" id="utilisation" required>
+      </div>
+      <div class="form-group">
+        <label for="budget">Budget *</label>
+        <input type="text" name="budget" id="budget" required>
+      </div>
+      <div class="form-group">
+        <label for="date-achat">Date d'achat souhaitée *</label>
+        <input type="date" name="date-achat" id="date-achat" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea name="message" id="message" required></textarea>
+      </div>
       <button type="submit">Envoyer la demande</button>
     </form>
   </main>

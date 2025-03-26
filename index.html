@@ -146,19 +146,24 @@
       header {
   background-color: #111;
   padding: 20px 40px;
-  display: flex;
-  flex-direction: column; /* empile le logo et le menu */
-  align-items: center;     /* centre horizontalement */
   border-bottom: 1px solid #333;
 }
+
+.header-container {
+  display: flex;
+  justify-content: center; /* 👈 centre logo + menu */
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
 
       nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* centre les liens dans le header */
   gap: 15px;
-  margin-top: 10px;
 }
+
 
       .hero {
         padding: 40px 20px;
@@ -180,6 +185,8 @@
 </head>
 <body>
   <header>
+    <header>
+  <div class="header-container">
     <div class="logo">GEARUP</div>
     <nav>
       <a href="index.html">Accueil</a>

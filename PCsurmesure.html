@@ -63,6 +63,27 @@
     }
 
     form {
+<input type="text" name="nom" placeholder="John Doe" required>
+<input type="tel" name="telephone" placeholder="06 92 00 00 00" required>
+<input type="email" name="email" placeholder="JohnDoe@gmail.com" required>
+<input type="text" name="adresse" placeholder="Rue des Hunter" required>
+<input type="text" name="ville" placeholder="Bordeaux" required>
+<input type="text" name="code-postal" placeholder="33000" required>
+<input type="text" name="pays" placeholder="France" required>
+
+<select name="utilisation" required>
+  <option value="">Utilisation prévue</option>
+  <option value="gaming" selected>Gaming</option>
+  <option value="bureautique">Bureautique</option>
+  <option value="montage">Montage / Création</option>
+  <option value="autre">Autre</option>
+</select>
+
+<input type="number" name="budget" placeholder="1800€" required>
+<input type="date" name="date-achat" required>
+
+<textarea name="message" placeholder="Je précise ma demande" required></textarea>
+
       display: flex;
       flex-direction: column;
       gap: 15px;

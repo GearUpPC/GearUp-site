@@ -1,0 +1,182 @@
+<!-- pcs.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GearUp - PCs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #0077cc;
+      --background-light: #ffffff;
+      --text-dark: #111;
+      --card-bg: #f7f7f7;
+      --card-border: #ddd;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: var(--background-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    nav a {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .pc-section {
+      padding: 60px 40px;
+    }
+
+    .pc-section h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: var(--accent);
+    }
+
+    .pc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .pc-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .pc-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .pc-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .pc-card h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .pc-card p {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .pc-card .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+
+    .pc-card button {
+      padding: 10px 20px;
+      border: none;
+      background-color: var(--accent);
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .pc-card button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 30px;
+      text-align: center;
+      color: #aaa;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">GEARUP</div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="pcs.html">PCs</a>
+      <a href="#">Composants</a>
+      <a href="#">Services</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="pc-section">
+    <h1>Nos PCs Gaming</h1>
+    <div class="pc-grid">
+      <div class="pc-card">
+        <img src="https://via.placeholder.com/300x180" alt="PC Gaming 1">
+        <h3>GearUp Elite</h3>
+        <p>Intel i7, RTX 5070, 32 Go RAM, 1 To SSD</p>
+        <div class="price">1 799€</div>
+        <button>Ajouter au panier</button>
+      </div>
+      <div class="pc-card">
+        <img src="https://via.placeholder.com/300x180" alt="PC Gaming 2">
+        <h3>GearUp Shadow</h3>
+        <p>Intel I5, RTX 4060, 16 Go RAM, 1 To SSD</p>
+        <div class="price">1 399€</div>
+        <button>Ajouter au panier</button>
+      </div>
+      <div class="pc-card">
+        <img src="https://via.placeholder.com/300x180" alt="PC Gaming 3">
+        <h3>GearUp Titan</h3>
+        <p>Intel i9, RTX 5090, 64 Go RAM, 2 To NVMe</p>
+        <div class="price">2 499€</div>
+        <button>Ajouter au panier</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 GearUp - Tous droits réservés
+  </footer>
+</body>
+</html>

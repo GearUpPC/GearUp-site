@@ -22,7 +22,7 @@
     }
 
     body {
-  font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: var(--background-light);
       color: var(--text-dark);
       line-height: 1.6;
@@ -50,10 +50,19 @@
       margin-left: 30px;
       font-weight: 400;
       transition: color 0.3s;
+      padding: 6px 12px;
+      border-radius: 5px;
     }
 
     nav a:hover {
-      color: var(--accent);
+      background-color: var(--accent);
+    }
+
+    .cart-icon {
+      background-color: #0077cc;
+      color: white;
+      font-size: 0.9rem;
+      text-decoration: none;
     }
 
     .hero {
@@ -132,10 +141,10 @@
 
   <section class="grid">
     <a href="pcs.html" class="card">
-  <img src="images/pc-gaming.jpg" alt="PC Gaming">
-  <h3>Pcs</h3>
-  <p>Performances, style et refroidissement au top.</p>
-</a>
+      <img src="images/pc-gaming.jpg" alt="PC Gaming">
+      <h3>Pcs</h3>
+      <p>Performances, style et refroidissement au top.</p>
+    </a>
 
     <div class="card">
       <h3>Cartes Graphiques</h3>
@@ -150,16 +159,16 @@
       <p>Support client réactif et personnalisé.</p>
     </div>
   </section>
-<script>
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  function updateCartIcon() {
-    const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-    const icon = document.querySelector('.cart-icon');
-    if (icon) icon.textContent = `Panier (${cartCount})`;
-  }
-  updateCartIcon();
-</script>
 
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    function updateCartIcon() {
+      const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const icon = document.querySelector('.cart-icon');
+      if (icon) icon.textContent = `Panier (${cartCount})`;
+    }
+    updateCartIcon();
+  </script>
 
   <footer>
     &copy; 2025 GearUp - Tous droits réservés

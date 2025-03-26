@@ -150,6 +150,16 @@
       <p>Support client réactif et personnalisé.</p>
     </div>
   </section>
+<script>
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  function updateCartIcon() {
+    const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const icon = document.querySelector('.cart-icon');
+    if (icon) icon.textContent = `Panier (${cartCount})`;
+  }
+  updateCartIcon();
+</script>
+
 
   <footer>
     &copy; 2025 GearUp - Tous droits réservés

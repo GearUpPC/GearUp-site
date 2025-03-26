@@ -32,6 +32,7 @@
       background-color: #111;
       padding: 20px 40px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #333;
@@ -44,10 +45,16 @@
       color: #fff;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
     nav a {
       color: #f1f1f1;
       text-decoration: none;
-      margin-left: 30px;
       font-weight: 400;
       transition: color 0.3s;
       padding: 6px 12px;
@@ -118,6 +125,36 @@
       text-align: center;
       color: #aaa;
     }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        margin-top: 10px;
+      }
+
+      .hero {
+        padding: 40px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .grid {
+        padding: 30px 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -140,9 +177,9 @@
   </section>
 
   <section class="grid">
-    <a href="pcs.html" class="card">
+    <a href="gearup-elite.html" class="card">
       <img src="images/pc-gaming.jpg" alt="PC Gaming">
-      <h3>Pcs</h3>
+      <h3>GearUp Elite</h3>
       <p>Performances, style et refroidissement au top.</p>
     </a>
 

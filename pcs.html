@@ -68,24 +68,30 @@
     }
 
     .pc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
 
-    .pc-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--card-border);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.3s, border-color 0.3s;
-    }
+.pc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+  color: #111;
+  transition: transform 0.3s, border-color 0.3s;
+}
 
-    .pc-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent);
-    }
+.pc-card:hover {
+  transform: translateY(-5px);
+  border-color: #0077cc;
+}
+
 
     .pc-card img {
       max-width: 100%;

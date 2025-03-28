@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Achetez le GearUp Elite RTX 3050, un PC gamer puissant et abordable, idéal pour jouer en Full HD. Livraison rapide. Garantie 2 ans.">
   <title>GearUp - PC Elite RTX 3050</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -17,9 +18,21 @@
       background-color: #111;
       padding: 20px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       color: #fff;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
     }
 
     .product-page {
@@ -39,6 +52,11 @@
     .main-image {
       width: 100%;
       border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .main-image:hover {
+      transform: scale(1.02);
     }
 
     .thumbs {
@@ -99,6 +117,7 @@
       justify-content: space-between;
       margin: 20px 0;
       flex-wrap: wrap;
+      gap: 10px;
     }
 
     .price {
@@ -110,15 +129,17 @@
     .add-btn {
       background-color: #0077cc;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       font-size: 1rem;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: transform 0.2s;
     }
 
     .add-btn:hover {
       background-color: #005fa3;
+      transform: scale(1.05);
     }
 
     .specs {
@@ -139,6 +160,16 @@
     }
 
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
       .product-page {
         flex-direction: column;
       }
@@ -152,14 +183,14 @@
 <body>
   <header>
     <div class="logo">GEARUP</div>
-<nav>
+    <nav>
       <a href="index.html">Accueil</a>
       <a href="pcgaming.html">PC Gaming</a>
       <a href="PCsurmesure.html">PC sur mesure</a>
       <a href="#">Composants</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
-      </nav>
+    </nav>
     <div>
       <a href="panier.html" class="cart-icon" style="color:#fff;text-decoration:none;background:#0077cc;padding:6px 12px;border-radius:5px;">
         Panier (0)
@@ -169,34 +200,25 @@
 
   <section class="product-page">
     <div class="image-gallery">
-      <img src="images/boitiermarsgris.png" alt="Image principale" class="main-image">
+      <img src="images/boitiermarsgris.png" alt="Boîtier PC GearUp Elite RTX 3050 gris" class="main-image">
       <div class="thumbs">
-        <img src="images/boitiermarsgris.png" alt="mini1">
-        <img src="images/boitiermarsgris.png" alt="mini2">
-        <img src="images/boitiermarsgris.png" alt="mini3">
-        <img src="images/boitiermarsgris.png" alt="mini4">
+        <img src="images/boitiermarsgris.png" alt="Miniature 1">
+        <img src="images/boitiermarsgris.png" alt="Miniature 2">
+        <img src="images/boitiermarsgris.png" alt="Miniature 3">
+        <img src="images/boitiermarsgris.png" alt="Miniature 4">
       </div>
     </div>
 
     <div class="product-info">
       <h1>GearUp Elite RTX 3050</h1>
       <p class="description">
-        Plongez dans l’univers du gaming avec notre PC Elite de GearUp, le compagnon idéal pour profiter de belles performances sans faire exploser votre budget !<br>
-<br>
-
-
-Équipé d’une carte graphique RTX GeForce 3050 et d’un processeur AMD Ryzen 5 5600, le GearUp Elite garantit une expérience fluide en 1080P, même sur les titres les plus gourmands.<br>
-<br>
-
-
-Un PC fiable et performant, idéal pour profiter des jeux récents dans de bonnes conditions.<br>
-<br>
-
+        ⚡ Montez en puissance avec le <strong>GearUp Elite RTX 3050</strong> : un PC gamer taillé pour la performance à prix serré !<br><br>
+        Profitez de vos jeux préférés en <strong>Full HD fluide</strong> grâce à la <strong>carte graphique NVIDIA RTX 3050</strong> et le <strong>processeur Ryzen 5 5600</strong>, le tout accompagné de <strong>16 Go de RAM DDR4</strong> pour une réactivité sans faille.<br><br>
+        ➕ Idéal pour les joueurs souhaitant une config fiable et prête à jouer dès la sortie du carton.
       </p>
       <div class="badges">
-        <img src="images/nvidia.png" alt="nvidia">
-        <img src="images/ryzen.png" alt="ryzen">
-<br>
+        <img src="images/nvidia.png" alt="Badge NVIDIA">
+        <img src="images/ryzen.png" alt="Badge Ryzen">
       </div>
       <div class="stock">✅ En stock</div>
       <div class="delivery">Livraison sous 5 jours ouvrés</div>
@@ -219,5 +241,16 @@ Un PC fiable et performant, idéal pour profiter des jeux récents dans de bonne
       </div>
     </div>
   </section>
+
+  <script>
+    const mainImg = document.querySelector('.main-image');
+    const thumbs = document.querySelectorAll('.thumbs img');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        mainImg.src = thumb.src;
+      });
+    });
+  </script>
 </body>
 </html>

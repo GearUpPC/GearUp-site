@@ -225,6 +225,13 @@
     </div>
   </header>
 
+<div style="display: flex; align-items: center; gap: 5px;">
+  <button onclick="changeQty(-1)" style="padding: 4px 10px;">-</button>
+  <input type="number" id="qty" value="1" min="1" style="width: 40px; text-align: center;">
+  <button onclick="changeQty(1)" style="padding: 4px 10px;">+</button>
+</div>
+
+
   <section class="product-page">
     <div class="image-gallery">
       <div class="thumbs">
@@ -341,6 +348,13 @@
       totalDisplay.textContent = total.toFixed(2) + ' €';
     }
     radios.forEach(radio => radio.addEventListener('change', updatePrice));
+function changeQty(amount) {
+  const qtyInput = document.getElementById('qty');
+  let value = parseInt(qtyInput.value);
+  value = isNaN(value) ? 1 : value + amount;
+  qtyInput.value = Math.max(1, value);
+}
+
   </script>
 </body>
 </html>
